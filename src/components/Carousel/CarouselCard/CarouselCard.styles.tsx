@@ -26,7 +26,7 @@ export const CarouselCardHeader = styled.div`
 
 export const CarouselCardDescriptionContainer = styled.div`
     color: #303030;
-    margin: 0 0.5rem 0.25rem 0.5rem;
+    margin: 1rem 0.5rem 0.25rem 0.5rem;
 `;
 
 export const CarouselCardHighlightsContainer = styled.div`
@@ -35,7 +35,7 @@ export const CarouselCardHighlightsContainer = styled.div`
     flex-grow: 1;
     color: #303030;
     gap: 0.5rem;
-    margin: 0.25rem 0.5rem 0 0.5rem;
+    margin: 1rem 0.5rem 0 0.5rem;
 `;
 
 export const CarouselCardTypesContainer = styled.div`
@@ -56,6 +56,6 @@ export const CarouselCardTechStackContainer = styled.div`
     flex-wrap: wrap;
 
     gap: 0.5rem;
-    padding: 0.5rem;
     margin-top: 1rem;
+    padding: 0.5rem 0 0 0;
 `;
