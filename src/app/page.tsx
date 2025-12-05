@@ -14,19 +14,19 @@ export default function Home() {
         <MainContainer>
             <NavBar />
 
-            <HeroSection />
+            <HeroSection id='about' />
 
-            <Section title='Professional Experience'>
+            <Section id='professional-experience' title='Professional Experience'>
                 <ProfessionalExperience period={'2021 — PRESENT'} />
                 <ProfessionalExperience period={'2019 — 2021'} />
                 <ProfessionalExperience period={'2018 — 2019'} />
             </Section>
 
-            <Section title='Academic Experience'>
+            <Section id='academic-experience' title='Academic Experience'>
                 <ProfessionalExperience period={'2014 — 2018'} />
             </Section>
 
-            <Section title='Projects'>
+            <Section id='projects' title='Projects'>
                 <Project>
                     {'Overblooming'}
                 </Project>
@@ -41,7 +41,7 @@ export default function Home() {
                 </Project>
             </Section>
 
-            <Section title='Contact'>
+            <Section id='contact' title='Contact'>
                 <Contact />
             </Section>
             {/*

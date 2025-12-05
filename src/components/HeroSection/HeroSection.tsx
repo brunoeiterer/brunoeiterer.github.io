@@ -1,8 +1,12 @@
 import {HeroTextTitle, HeroImage, HeroSectionSeparator, HeroTextTitleContainer, HeroHighlightsContainer, HeroSectionContainer } from "./HeroSection.styles";
 
-export default function HeroSection() {
+interface HeroSectionProps extends React.HTMLAttributes<HTMLElement> {
+
+}
+
+export default function HeroSection({ id }: HeroSectionProps) {
     return (
-        <HeroSectionContainer>
+        <HeroSectionContainer id={id}>
             { 'Hero' }
         </HeroSectionContainer>
     )
