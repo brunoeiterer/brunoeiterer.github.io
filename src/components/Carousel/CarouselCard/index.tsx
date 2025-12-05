@@ -1,4 +1,4 @@
-import { CarouselCardContainer, CarouselCardDescriptionContainer, CarouselCardHeader, CarouselCardHighlightsContainer, CarouselCardTechStackContainer, CarouselCardTypesContainer } from "./CarouselCard.styles";
+import { CarouselCardContainer, CarouselCardDescriptionContainer, CarouselCardHeader, CarouselCardHighlightsContainer, CarouselCardTechStackContainer, CarouselCardTypesContainer, CarouselPeriodContainer } from "./CarouselCard.styles";
 import CarouselCardHighlight from "./CarouselCardHighlight";
 import CarouselCardLogo from "./CarouselCardLogo";
 import CarouselCardTitle from "./CarouselCardTitle";
@@ -19,6 +19,10 @@ interface CarouselCardProps {
 export default function CarouselCard({ logoImageSource, logoAltText, title, period, description, highlights, types, techStack }: CarouselCardProps) {
     return (
         <CarouselCardContainer>
+            <CarouselPeriodContainer>
+                <h5> { period } </h5>
+            </CarouselPeriodContainer>
+
             <CarouselCardHeader>
                 {/*}
                 <CarouselCardLogo
@@ -26,14 +30,11 @@ export default function CarouselCard({ logoImageSource, logoAltText, title, peri
                     imageAltText={logoAltText}
                 />
                 */}
+
                 <CarouselCardTitle
                     title={title}
                 />
             </CarouselCardHeader>
-            
-            <CarouselCardPeriod
-                period={period}
-            />
 
             <CarouselCardDescriptionContainer>
                 {description}

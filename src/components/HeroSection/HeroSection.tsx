@@ -1,31 +1,39 @@
-import { HeroImageContainer, HeroSectionContainer, HeroTextContainer, HeroTextTitle } from "./HeroSection.styles";
-
-import Image from 'next/image';
+import {HeroTextTitle, HeroImage, HeroSectionSeparator, HeroTextTitleContainer, HeroHighlightsContainer, HeroSectionContainer } from "./HeroSection.styles";
 
 export default function HeroSection() {
     return (
         <HeroSectionContainer>
-            <HeroImageContainer>
-                <Image
-                    src='/images/HeroImage.jpeg'
-                    alt='developing with banshee'
-                    width={369}
-                    height={400}
-                />
-            </HeroImageContainer>
+            { 'Hero' }
+        </HeroSectionContainer>
+    )
 
-            <HeroTextContainer>
+    return (
+        <>
+            <HeroImage
+                src='/images/HeroImage.png'
+                alt='developing with banshee'
+                width={953}
+                height={768}
+            />
+
+            <HeroTextTitleContainer>
                 <HeroTextTitle>
                     Hi, I'm Bruno :)
                 </HeroTextTitle>
+            </HeroTextTitleContainer>
 
-            I'm a generalist software developer from Brazil. I have over 10 years of experience in Software Development, with 6 years professionally and 4 year in an academic environment, working across Embedded Systems, Web, and Desktop
-            Applications on an Enterprise level, focusing on backend development and the application logic, while also contributing to the frontend/user interface
-            whenever needed.
+            <HeroHighlightsContainer>
+              <ul>
+                <li>Generalist Software Engineer</li>
+                <li>7 years of experience</li>
+                <li>Enterprise • Embedded • Web • Desktop</li>
+                <li>Strong C#, C</li>
+                <li>Mid TypeScript, React, C++</li>
+                <li>Also: Python, Java</li>
+              </ul>
+            </HeroHighlightsContainer>
 
-            I use mainly C#, C and C++, complemented by experience with Java, JavaScript, Typescript and Python.
-            I have also used multiple web and desktop frameworks, like AspNet.Core, WCF, NextJS, WPF, WinUI 3 and JavaFX.
-            </HeroTextContainer>
-        </HeroSectionContainer>
+            <HeroSectionSeparator />
+        </>
     );
 }

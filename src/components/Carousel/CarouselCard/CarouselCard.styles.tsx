@@ -3,30 +3,28 @@
 import styled from 'styled-components';
 
 export const CarouselCardContainer = styled.div`
-    display:flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
 
     border-radius: 0.5rem;
     background-color: #FFFFFF;
 
-    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.3);
+    gap: 1rem 2rem;
 
-    padding: 1rem;
+    width: 1000px;
+`;
 
-    width: 400px
+export const CarouselPeriodContainer = styled.div`
+    color: #30303096;
 `;
 
 export const CarouselCardHeader = styled.div`
-    display: flex;
-    align-items: center;
-
-    gap: 0.5rem;
-    margin: 0.5rem 0.5rem 0.25rem 0.5rem;
+    grid-column: 2 / 6;
 `;
 
 export const CarouselCardDescriptionContainer = styled.div`
     color: #303030;
-    margin: 1rem 0.5rem 0.25rem 0.5rem;
+    grid-column: 2 / 6;
 `;
 
 export const CarouselCardHighlightsContainer = styled.div`
@@ -35,27 +33,25 @@ export const CarouselCardHighlightsContainer = styled.div`
     flex-grow: 1;
     color: #303030;
     gap: 0.5rem;
-    margin: 1rem 0.5rem 0 0.5rem;
+
+    grid-column: 2 / 6;
 `;
 
 export const CarouselCardTypesContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
 
-    background-color: #303030;
-    color: #FFFFFF;
-    font-size: 0.875rem;
+    color: #303030;
+    font-size: 0.85rem;
 
     gap: 0.5rem;
-    padding: 0.5rem;
-    margin-top: 1rem;
+    grid-column: 2 / 6;
 `;
 
 export const CarouselCardTechStackContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
 
-    gap: 0.5rem;
-    margin-top: 1rem;
-    padding: 0.5rem 0 0 0;
+    gap: 0.25rem;
+    grid-column: 2 / 6;
 `;
