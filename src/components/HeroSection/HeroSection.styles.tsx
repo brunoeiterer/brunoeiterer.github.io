@@ -21,6 +21,9 @@ export const HeroSectionContainer = styled.div`
     @media (min-width: 1024px) {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-column: 1 / span 12;
+
+        margin-left: 9rem;
+        margin-right: 9rem;
     }
 `;
 

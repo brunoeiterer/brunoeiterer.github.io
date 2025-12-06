@@ -1,8 +1,5 @@
 import HeroSection from "@/components/HeroSection/HeroSection";
-import Carousel from "@/components/Carousel/Carousel";
 import { MainContainer } from "./page.styles";
-import Footer from "@/components/Footer/Footer";
-import CarouselCard from "@/components/Carousel/CarouselCard";
 import Section from "@/components/Section";
 import ProfessionalExperience from "@/components/ProfessionalExperience";
 import Project from "@/components/Project";
@@ -17,8 +14,23 @@ export default function Home() {
             <HeroSection id='about' />
 
             <Section id='professional-experience' title='Professional Experience'>
-                <ProfessionalExperience period={'2021 — PRESENT'} />
-                <ProfessionalExperience period={'2019 — 2021'} />
+                <ProfessionalExperience
+                    period={'2021 — PRESENT'}
+                    titles={["Senior Software Engineer", "Software Engineering Consultant"]}
+                    company={"RDI Software @ McDonald's"}
+                    description={"Development of McDonald's restaurants applications."}
+                    highlights={['Developed a new, modern UI for the POS',
+                        'Developed the integration with new Fiscal Devices for Belgium, migrating from a serial connection solution to a GraphQL solution',
+                        'Supported the migration of the mobile ordering solution from a legacy, convoluted solution, to a modern one',
+                        'Solved critical and high-profile issues, including production incidents, 40% faster than average',
+                        'Acted as team dev lead and SME on multiple occasions, guiding team members, providing solutions, managing delivery and client interaction']}
+                    types={'Enterprise · Web · FullStack'}
+                    languages={['C#', 'TypeScript', 'C', 'C++', 'JavaScript']}
+                    frameworks={['NextJS', 'React', 'WCF']}
+                    databases={['RavenDB (NoSql)']}
+                />
+                <ProfessionalExperience
+                    period={'2019 — 2021'} />
                 <ProfessionalExperience period={'2018 — 2019'} />
             </Section>
 
