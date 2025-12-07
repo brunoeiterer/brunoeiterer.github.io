@@ -76,18 +76,27 @@ export default function Home() {
             </Section>
 
             <Section id='projects' title='Projects'>
-                <Project>
-                    {'Overblooming'}
-                </Project>
-                <Project>
-                    {'Lifejournaler'}
-                </Project>
-                <Project>
-                    {'PrintReady'}
-                </Project>
-                <Project>
-                    {'BeyondHelix'}
-                </Project>
+                <Project
+                    title='Lifejournaler'
+                    description='Liferjounaler is a lightweight journaler app, focused on the needs of bipolar disorder.'
+                    caption="This app is tailored to my girlfriend's mood/thoughts tracking needs. It contains options to track weather, mood sleep quality, menstrual cycle, exercise, appetite and levels of anxiety, racing thoughts, depression, autocriticism and sensorial overload. Users can also add custom notes and check trends using a graphic calendar or plotted data."
+                    techStack={['TypeScript', 'React', 'NextJS', 'C#', 'ASP.NET Core', 'Entity Framework', 'PostgreSQL']}
+                />
+                <Project
+                    title='PrintReady'
+                    description='PrintReady is a windows app that automatically resizes and frames pictures for printing.'
+                    caption='This app was born from getting some printed pictures stretched and clipped. With it the pictures are uploaded, the desired output size and border color is selected, and they are all automatically made ready for printing.'
+                    images={['/images/PrintReady.jpg']}
+                    techStack={['C#', 'WinUi 3']}
+                />
+                <Project
+                    title='Overblooming'
+                    description='Overblooming is an indie, exploration, walking-simulator type game.'
+                    caption='This project was an exploration of 3D modeling and texturing as well as a learning experience in Godot and Steam publishing.'
+                    videoSource='https://www.youtube.com/embed/Eaop7617gBs?si=jkK5_GyVN_ZLGoyR'
+                    videoTitle='Overblooming Trailer'
+                    techStack={['C#', 'Godot', 'Blender', 'Steam']}
+                />
             </Section>
 
             <Section id='contact' title='Contact'>
