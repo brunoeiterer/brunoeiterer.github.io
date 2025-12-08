@@ -1,6 +1,7 @@
 'use client';
 
-import { ProjectCaption, ProjectContainer, ProjectDescription, ProjectImage, ProjectImages, ProjectTechStack, ProjectTechStackItem, ProjectTitle, ProjectVideo } from "./Project.styles";
+import { ProjectCaption, ProjectContainer, ProjectContent, ProjectDescription, ProjectImages, ProjectTechStack, ProjectTechStackItem, ProjectTitle, ProjectVideo } from "./Project.styles";
+import ProjectImage from "./ProjectImage";
 
 export interface ProjectProps {
     title: string;
@@ -15,22 +16,28 @@ export interface ProjectProps {
 export default function Project({ title, description, caption, images, videoSource, videoTitle, techStack }: ProjectProps) {
     return (
         <ProjectContainer>
-            <ProjectTitle>
-                { title }
-            </ProjectTitle>
 
-            <ProjectDescription>
-                { description }
-            </ProjectDescription>
+            <ProjectContent>
+                <ProjectTitle>
+                    { title }
+                </ProjectTitle>
+                <ProjectDescription>
+                    { description }
+                </ProjectDescription>
 
-            <ProjectCaption>
-                { caption }
-            </ProjectCaption>
+                <ProjectCaption>
+                    { caption }
+                </ProjectCaption>
+
+                <ProjectTechStack>
+                    {techStack?.map((techStackItem, index) => <ProjectTechStackItem key={index}>{techStackItem}</ProjectTechStackItem>)}
+                </ProjectTechStack>
+            </ProjectContent>
 
             {images &&
                 <ProjectImages>
                     {images.map((image, index) =>
-                        <ProjectImage key={index} src={image} alt={`${title}-image-${index}`} style={{ width: '100%', height: 'auto' }} width={2048} height={2048} />)}
+                        <ProjectImage key={index} src={image} alt={`${title}-image-${index}`} />)}
                 </ProjectImages>
             }
 
@@ -43,10 +50,6 @@ export default function Project({ title, description, caption, images, videoSour
                     allowFullScreen
                 />
             }
-
-            <ProjectTechStack>
-                {techStack?.map((techStackItem, index) => <ProjectTechStackItem key={index}>{techStackItem}</ProjectTechStackItem>)}
-            </ProjectTechStack>
 
         </ProjectContainer>
     )
