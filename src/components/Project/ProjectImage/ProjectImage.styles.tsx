@@ -24,12 +24,29 @@ export const ProjectImageContainer = styled(Image)<{$expanded: boolean}>`
         left: 0;
         right: 0;
         bottom: 0;
-        width: auto;
-        height: 90%;
+        width: 90%;
+        height: auto;
         z-index: 2;
         margin: auto;
         box-shadow: 0 12px 40px rgba(0,0,0,0.25);
     `}
+
+    @media (min-width: 768px) {
+        ${({ $expanded }) =>
+            $expanded &&
+            `
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 80%;
+            height: auto;
+            z-index: 2;
+            margin: auto;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+        `}
+    }
 `;
 
 export const BackgroundOverlay = styled.div`
