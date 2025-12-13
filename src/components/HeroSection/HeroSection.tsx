@@ -1,14 +1,12 @@
 import {HeroTextTitle, HeroImage, HeroSectionSeparator, HeroSectionContainer, HeroTextContainer } from "./HeroSection.styles";
 
-interface HeroSectionProps extends React.HTMLAttributes<HTMLElement> {
-
-}
+type HeroSectionProps = React.HTMLAttributes<HTMLElement>;
 
 export default function HeroSection({ id }: HeroSectionProps) {
     return (
         <HeroSectionContainer id={id}>
             <HeroTextTitle>
-                Hi, I'm Bruno :)
+                {"Hi, I'm Bruno :)"}
             </HeroTextTitle>
             <HeroTextContainer>
                 <ul>
