@@ -20,13 +20,13 @@ export const ProjectImageContainer = styled(Image)<{$expanded: boolean}>`
         $expanded &&
         `
         position: fixed;
-        top: 0;
+        top: 27px;
         left: 0;
         right: 0;
         bottom: 0;
         width: 90%;
         height: auto;
-        z-index: 2;
+        z-index: 3;
         margin: auto;
         box-shadow: 0 12px 40px rgba(0,0,0,0.25);
     `}
@@ -35,16 +35,8 @@ export const ProjectImageContainer = styled(Image)<{$expanded: boolean}>`
         ${({ $expanded }) =>
             $expanded &&
             `
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 80%;
-            height: auto;
-            z-index: 2;
-            margin: auto;
-            box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+            top: 70px;
+            width: 70%;
         `}
     }
 `;
@@ -56,5 +48,5 @@ export const BackgroundOverlay = styled.div`
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
+    z-index: 2;
 `;
